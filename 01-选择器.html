@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<ul class="ul1">
+    <li>nihao</li>
+    <li>nihao</li>
+    <li>nihao</li>
+    <li>nihao</li>
+    <li>nihao</li>
+    <ul class="ul2">
+        <li>zaijian</li>
+        <li>zaijian</li>
+        <li>zaijian</li>
+        <li>zaijian</li>
+    </ul>
+</ul>
+<p>hello</p>
+<script>
+    /*$("li:odd").css("color","red");
+    $("li:even").css("color","green");
+    $("li:eq(4)").css("font-weight","900");*/
+    //子代选择器
+    $(".ul1").children("li").css("color","red");
+    //后代选择器
+    $(".ul1").find("li").css("font-weight","900");
+
+    $(".ul1").siblings("p").css("color","blue");
+
+    $(".ul1").parent().css("background","lightpink");
+
+    $(".ul2>li").eq(2).css("color","yellow");
+</script>
+</body>
+</html>
